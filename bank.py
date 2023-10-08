@@ -1,33 +1,23 @@
-from account import Account
-from savings_account import SavingsAccount
-class Bank:
-    def __init__(self, name):
-        self.name = name
-        self.accounts = {}
+from account import A
+from savings_account import SA
+class C:
+    def __init__(self, n):
+        self.n = n
+        self.acc = {}
 
-    def create_account(self, account_number, initial_balance):
-        account = Account(account_number, initial_balance)
-        self.accounts[account_number] = account
+    def ca(self, ac, ib):
+        a = A(ac, ib)
+        self.acc[ac] = a
 
-    def get_account(self, account_number):
-        return self.accounts.get(account_number)
+    def ga(self, ac):
+        return self.acc.get(ac)
 
-    def display_accounts(self):
+    def da(self):
         print("Accounts:")
-        for account_number, account in self.accounts.items():
-            print(f"Account {account_number}, Balance: ${account.balance}")
+        for ac, a in self.acc.items():
+            print(f"Account {ac}, Balance: ${a.bal}")
 
-    def process_monthly_interest(self):
-        for account_number, account in self.accounts.items():
-            if isinstance(account, SavingsAccount):
-                account.calculate_interest()
-
-    def process_transactions(self):
-        # Large class and Long method
-        for account_number, account in self.accounts.items():
-            account.deposit(100)
-            account.withdraw(50)
-            account.display_balance()
-            account.deposit(200)
-            account.withdraw(100)
-            account.display_balance()
+    def pmi(self):
+        for ac, a in self.acc.items():
+            if isinstance(a, SA):
+                a.ci()

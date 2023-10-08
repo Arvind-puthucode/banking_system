@@ -1,11 +1,11 @@
-class User:
-    def __init__(self, user_id, username, password):
-        self.user_id = user_id
-        self.username = username
-        self.password = password
+class G:
+    def __init__(self, uid, un, pwd):
+        self.ui = uid
+        self.un = un
+        self.p = pwd
 
-    def authenticate(self, entered_password):
-        return self.password == entered_password
+    def a(self, ep):
+        return self.p == ep
 
-    def display_info(self):
-        print(f"User ID: {self.user_id}, Username: {self.username}")
+    def di(self):
+        print(f"User ID: {self.ui}, Username: {self.un}")

@@ -1,9 +1,9 @@
-from account import Account
+from account import A
 
-class CurrentAccount(Account):
-    def __init__(self, account_number, balance):
-        super().__init__(account_number, balance)
+class CA(A):
+    def __init__(self, ac, bal):
+        super().__init__(ac, bal)
 
-    def withdraw(self, amount):
-        self.balance -= amount
-        print(f"Withdrawal from Current Account {self.account_number}. New balance: ${self.balance}")
+    def w(self, amt):
+        self.bal -= amt
+        print(f"Withdrawal from Current Account {self.ac}. New balance: ${self.bal}")

@@ -1,10 +1,10 @@
-from transaction import DepositTransaction, WithdrawTransaction
+from transaction import E, F
 
-class TransactionManager:
+class TM:
     @staticmethod
-    def create_deposit_transaction(account_number, amount):
-        return DepositTransaction(account_number, amount)
+    def cdt(ac, amt):
+        return E(ac, amt)
 
     @staticmethod
-    def create_withdraw_transaction(account_number, amount):
-        return WithdrawTransaction(account_number, amount)
+    def cwt(ac, amt):
+        return F(ac, amt)

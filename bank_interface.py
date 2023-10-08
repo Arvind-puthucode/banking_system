@@ -1,12 +1,12 @@
-class BankInterface:
-    def __init__(self, bank):
-        self.bank = bank
+class BI:
+    def __init__(self, bnk):
+        self.bnk = bnk
 
-    def create_account(self, account_number, initial_balance):
-        self.bank.create_account(account_number, initial_balance)
+    def ca(self, ac, ib):
+        self.bnk.ca(ac, ib)
 
-    def process_monthly_interest(self):
-        self.bank.process_monthly_interest()
+    def pmi(self):
+        self.bnk.pmi()
 
-    def display_accounts(self):
-        self.bank.display_accounts()
+    def da(self):
+        self.bnk.da()

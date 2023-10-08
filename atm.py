@@ -1,6 +1,6 @@
-class ATM:
-    def __init__(self, bank):
-        self.bank = bank
+class B:
+    def __init__(self, bnk):
+        self.bnk = bnk
 
-    def perform_transaction(self, transaction):
-        transaction.process(self.bank)
+    def p(self, tr):
+        tr.p(self.bnk)

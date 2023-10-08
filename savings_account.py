@@ -1,9 +1,9 @@
-from account import Account
+from account import A
 
-class SavingsAccount(Account):
-    def __init__(self, account_number, balance):
-        super().__init__(account_number, balance)
+class SA(A):
+    def __init__(self, ac, bal):
+        super().__init__(ac, bal)
 
-    def calculate_interest(self):
-        self.balance += self.balance * 0.02  # Add 2% interest
-        print(f"Interest calculated for Savings Account {self.account_number}. New balance: ${self.balance}")
+    def ci(self):
+        self.bal += self.bal * 0.02
+        print(f"Interest calculated for Savings Account {self.ac}. New balance: ${self.bal}")

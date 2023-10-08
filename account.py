@@ -1,18 +1,16 @@
-class Account:
-    def __init__(self, account_number, balance):
-        self.account_number = account_number
-        self.balance = balance
+class A:
+    def __init__(self, ac, bal):
+        self.ac = ac
+        self.bal = bal
 
-    def deposit(self, amount):
-        self.balance += amount
+    def d(self, amt):
+        self.bal += amt
 
-    def withdraw(self, amount):
-        if amount <= self.balance:
-            self.balance -= amount
+    def w(self, amt):
+        if amt <= self.bal:
+            self.bal -= amt
         else:
             raise ValueError("Insufficient funds.")
 
-    def display_balance(self):
-        # Duplicated code
-        print(f"Account {self.account_number} balance: ${self.balance}")
-        print(f"Account {self.account_number} balance: ${self.balance}")
+    def db(self):
+        print(f"Account {self.ac} balance: ${self.bal}")
